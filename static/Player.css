@@ -1,0 +1,135 @@
+		@font-face{
+				font-family: myFirstFont;
+				src:url(sansation_light.woff);
+				font-stretch: condensed;
+		}
+
+		*{
+			font-family: myFirstFont;
+		}
+
+		body{
+				background-color: #6A5ACD;
+				text-align: center;
+				font-size:50px;
+				font-weight: bold;
+				color:#EEE8AA;
+		}
+
+
+		#main{
+				position: relative;
+				top:60px;
+				left:420px;
+				width:50%;
+				height:1100px;
+				color:#000000 ;
+				background-color: #FFDAB9;
+				border-radius: 25px;
+				text-align: center;
+				font-size: 30px;
+				padding-top: 25px;
+				margin:0;
+				
+		}
+
+		#name{
+				position: relative;
+				top:180px;
+				left:0px;
+				border-radius: 25px;
+				height:80px;
+				text-align: left;
+				background-color: #DDA0DD;
+				padding-top: 25px;
+				margin:0;
+				word-wrap: break-word;
+				
+		}
+		#nationalities{
+				position: relative;
+				top:150px;
+				border-radius: 25px;
+				left:0px;
+				height:80px;
+				text-align: left;
+				background-color: #20B2AA;
+				padding-top: 25px;
+				margin:0;
+				word-wrap: break-word;
+				
+
+		}
+		#fullName{
+				position: relative;
+				top:120px;
+				left:0px;
+				border-radius: 25px;
+				height:80px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #2E8B57;
+				margin:0;
+				word-wrap: break-word;
+		}
+		#pob{
+				position: relative;
+				top:90px;
+				left:0px;
+				border-radius: 25px;
+				height:80px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #FF6347;
+				margin:0;
+				word-wrap: break-word;
+		}
+		#dob{
+				position: relative;
+				top:60px;
+				left:0px;
+				height:80px;
+				border-radius: 25px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #C0C0C0;
+				margin:0;
+				word-wrap: break-word;
+		}
+		#height{
+				position: relative;
+				top:30px;
+				left:0px;
+				height:80px;
+				border-radius: 25px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #DAA520;
+				margin:0;
+				word-wrap: break-word;
+
+		}
+		#weight{
+				position: relative;
+				top:0px;
+				left:0px;
+				height:80px;
+				border-radius: 25px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #BC8F8F;
+				margin:0;
+				word-wrap: break-word;
+		}
+		#foot{
+				position: relative;
+				top:-30px;
+				left:0px;
+				height:80px;
+				border-radius: 25px;
+				text-align: left;
+				padding-top: 25px;
+				background-color: #98FB98;
+				margin:0;
+				word-wrap: break-word;
+		}

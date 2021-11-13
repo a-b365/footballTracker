@@ -1,0 +1,113 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %}Fixtures{% endblock %}
+
+
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
+
+<div class="gridds">
+
+    <div class="gri1">
+
+        <button><li><a href="{% url 'moreSpecificLeagueView' 'UCL' %}">UEFA Champions League</a></li></button>
+
+        <button> <li><a href="{% url 'moreSpecificLeagueView' 'Laliga' %}">Laliga Santander</a></li></button>
+       
+        <button> <li><a href="{% url 'moreSpecificLeagueView' 'PL' %}">Premier League</a></li></button>
+       
+        <button> <li><a href="{% url 'moreSpecificLeagueView' 'EuroCup' %}">Euro 2021</a></li></button>
+       
+        <button> <li><a href="{% url 'moreSpecificLeagueView' 'UEL' %}">UEFA Europa League </a></li></button>
+
+ 
+
+</div>
+    
+    <div class="gri2">
+        <h2 style="text-align: center;">Matches Fixtures</h2>
+        <br>
+        <br>
+
+        <section class="l-container">
+            {% for value in matches.data|dictsort:"match_start" %}
+
+            {% if value.status == "finished" %}
+            <a href="#" style="text-decoration: none; cursor:pointer;">
+                <div class="l-match_fixtures">
+                    <div class="club_ico">
+                        <img src="{{value.home_team.logo}}" alt="">
+                    </div>
+                    <div class="club_vs">
+                        <span>
+                            <p> {{ value.home_team.name }}&nbsp;&nbsp; <button style=color:blue;align-items:center;width:100px;height:50px;font-size: 16px;">{{value.stats.home_score}}:{{value.country.country_code}} 
+                                {{value.stats.away_score}}&nbsp; &nbsp;{{value.country.country_code}}</button>&nbsp;&nbsp;{{ value.away_team.name }}</p>
+                        </span>
+                    </div>
+                    <div class="club_ico">
+                        <img src="{{value.away_team.logo}}" alt="">
+                    </div>
+                </div>
+            </a>
+
+            <br>
+            <br>
+            {% else %}
+            <a href="#" style="text-decoration: none; cursor:pointer;"><div class="l-match_fixtures">
+                <div class="club_ico">
+                    <img src="{{value.home_team.logo}}" alt="">
+                </div>
+                <div class="club_vs">
+                    <span>
+                        <p> {{ value.home_team.name }} Vs {{ value.away_team.name }}</p>
+                    </span>
+                </div>
+                <div class="club_ico">
+                    <img src="{{value.away_team.logo}}" alt="">
+                </div>
+            </div>
+            </a>
+            {% endif %}
+
+            {% endfor %}
+
+        </section>
+
+    </div>
+   
+    <div class="gri3">
+           
+  <h3><a href="#">>>> Messi is the arguably the best player in the world</a></h3>
+  <h4>By Diego Maradona</h4>
+
+  <br>
+
+  <h3><a href="#">>>> Ronaldo ready to fire up with Juventus for upcoming season</a></h3>
+  <h4>By De-Natale</h4>
+
+<br>
+  <h3><a href="#">>>> Mbappe, Messi and Neymar trio could be the greatest of all time</a></h3>
+  <h4>By Abidal</h4>
+<br>
+  <h3><a href="#">>>> PSG books Eifel Tower for 3 million euros in the honor of Leo Messi</a></h3>
+  <h4>By Marie France</h4>
+
+  <br>
+  <h3><a href="#">>>> Memphis Depay shining up against Juventus in the pre-season mactch</a></h3>
+  <h4>By Julien Carlos</h4>
+  
+  <br>
+  <h3><a href="#">>>> Tottenham ready to deal with Man City after City offer unbelieveable price for Harry Kane</a></h3>
+  <h4>By Charlie Simons</h4>
+
+
+    </div>
+
+    
+</div>
+
+
+
+{% endblock %}

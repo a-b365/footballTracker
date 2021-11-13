@@ -1,0 +1,62 @@
+{% extends 'Leagues.html' %}
+
+{% block title %}Teams{% endblock %}
+
+{% block league %}
+
+		
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+		<style type="text/css">
+			
+			.teams{
+
+				width:100%;
+				color: black;
+				size: 20px;
+				font-family: "Audiowide", sans-serif;
+				background-color: #EEE8AA;
+
+			}
+
+
+		</style>
+
+
+					{% block outer %}{% endblock %}
+
+					<h1>Choose a Team</h1>
+				
+				    {% for teams in data %}
+
+				    <div class="teams">
+
+				    <h2><span><img src="{{teams.logo}}" height="100px" width="100px"><a href="#">{{teams.name}}</a></span></h2>
+
+				    </div>
+
+                    {% endfor %}
+
+                    {% block head %}{% endblock %}
+
+
+	<!--		<div class="league-divison">{{data.leagueName}}</div>		
+				
+			{% for value in data %}
+				<div class="matches">
+				{% if value.status == "finished" %}
+					{{ value.homeName }}&nbsp;:&nbsp;{{value.team_home_90min_goals}}&nbsp;&nbsp;&nbsp;&nbsp;{{value.team_away_90min_goals}}&nbsp;:&nbsp;{{ value.awayName }}
+
+				{% else %}
+					{{ value.homeName }}VS{{ value.awayName }}
+				{% endif %}	
+				<a href="#" align="left">View Details</a>
+				</div>
+			{% endfor %}-->
+{% endblock %}
+
+{% block table %}
+
+{% endblock %}
+
+

@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+ 
+}
+
+table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid black;
+        
+        }
+
+      
+td, th {
+        
+        text-align: center;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #c5c0c0;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #faf5f5;
+      }
+
+
+@media screen and(max-width: 800px){
+ 
+
+}
+  
+
+/* This is  of clf.html page fixture */
+
+.gridds-1{
+
+  height: auto;
+  display: grid;
+  grid-gap:1rem;
+  grid-template-areas: 
+  'gri1-1  gri2-2 gri2-2 gri2-2 gri3-3';
+  background: mintcream;
+
+}
+
+
+
+.gri1-1{
+margin-top: 1rem;
+background:#ecebeb;
+grid-area: gri1-1;
+height: 450px;
+border: 1px solid rgb(7, 7, 7);
+padding: 23px;
+margin-left:1rem;
+list-style: none;
+width:250px;
+
+border-radius: 6px;
+
+}
+
+.gri2-2{
+margin-top: 1rem;
+background: #f7f4f4e3;
+grid-area:gri2-2;
+min-height: 150vh;
+border: 1px solid rgb(3, 3, 3);
+padding: 23px;
+border-radius: 6px;
+display: inline-block;
+
+}
+
+.gri3-3{
+margin-top: 1rem;
+background:rgba(240, 237, 237, 0.966);
+grid-area:gri3-3;
+border: 1px solid rgb(14, 13, 13);
+padding: 23px;
+height:850px;
+list-style: none;
+margin-right: 1rem;
+width: 250px;
+border-radius: 6px;
+
+}
+
+.gri3-3 h3 >a{
+  text-decoration: none;
+  color:black;
+  font-size: 14px;
+  
+  
+}
+
+.gri3-3>h4{
+  color:rgb(46, 6, 3);
+  font-size: 12px;
+}
+
+.gri3-3 h3:hover a{
+  color:rgb(7, 131, 231);
+  
+}
+
+.gri1-1> button{
+  width:100%;
+  height: 4rem;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  
+}
+
+.gri1-1> button>li>a{
+text-decoration: none;
+color: black;
+font-size: 16px;
+
+}
+
+.gri1-1 button:hover {
+  cursor:pointer;
+  color:white;
+  transition: 0.8s;
+  background-color: rgb(202, 15, 15);
+}
+
+
+.gri1-1 button:hover{
+  cursor:pointer;
+  color:white;
+  transition: 0.8s;
+  background-color: rgb(231, 151, 151);
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+  .gridds-1{
+
+  
+       grid-template-areas: 
+       'gri1-1 gri1-1 gri1-1 gri1-1'
+       'gri2-2 gri2-2 gri2-2 gri2-2'
+       'gri3-3 gri3-3 gri3-3 gri3-3'
+      
+       ;
+   
+   }
+
+   .gri1-1{
+       margin:0;
+       display:none;
+     
+   }
+
+   .gri3-3{
+       display:none;
+   }
+
+}
+
+
+.inner{
+
+  height: 5vh;
+  text-align: center;
+  width:100%;
+}
+
+
+.tb{
+
+  display: flex;
+  justify-content: space-evenly;
+
+
+}

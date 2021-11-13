@@ -1,0 +1,9 @@
+Django>=3.0,<=3.1
+whitenoise
+psycopg2-binary
+BeautifulSoup4
+scipy
+nltk
+pandas
+requests
+django-rosetta

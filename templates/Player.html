@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Footballing|Player</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Player.css' %}">
+	<link rel="icon" href="{% static 'Football tracker.png' %}" type="image/icon type">
+</head>
+
+<body>
+	Player Information Display Page
+	<div id="main">
+		<img src="{{photoURL}}"><br>
+		<div id="name">Name: {{player_name}}</div><br>
+		<div id="nationalities">Nationality: {{nationalities}}</div><br>
+		<div id="fullName">Full Name: {{fullName}}</div><br>
+		<div id="pob">Place of Birth: {{pob}}</div><br>
+		<div id="dob">Date of Birth: {{dob}}</div><br>
+		<div id="height">Height: {{height}}</div><br>
+		<div id="weight">Weight: {{weight}}</div><br>
+		<div id="foot">Foot: {{foot}}</div><br>
+	</div>
+</body>
+</html>

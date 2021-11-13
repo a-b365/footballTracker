@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load i18n %}
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Homepage{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
+    rel='stylesheet' type='text/css'>
+           
+            <!-- bootstrap link cdn-->
+    
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+<!--     <div class="logo">
+        <h1>FOOTBALL TRACKER</h1>
+
+        <div class="heyyy">
+            <a><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+
+
+    </div> -->
+
+        <div class="again-top">
+        
+        <div class="imk">
+            <a href="{% url 'home' %}"><img src="{% static 'footballtrack.png' %}"></a>
+        </div>
+        <div>.</div>
+        <div class="hey">
+            <a><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        </div>
+
+        {% block fake %}
+        
+        {% endblock %}
+
+{% block navbar %}
+
+ <div class ="navbar">
+        
+   
+        <ul>
+            
+            <li><a class ="active" href="{% url 'home' %}"><i class="fa fa-home">{% translate 'Home' %}</i></a></li>
+            <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i>{% translate 'Matches Fixtures' %}</a>
+            <ul>
+              <li><a href="{% url 'moreSpecificLeagueView'  'UCL'%}">UEFA Champions League</a></li>
+              <li><a href="{% url 'moreSpecificLeagueView'  'Laliga' %}">Laliga</a></li>
+             <li><a href="{% url 'moreSpecificLeagueView'  'PL' %}">Premier League</a></li> 
+             <li><a href="{% url 'moreSpecificLeagueView'  'UEL' %}">UEFA Europa League</a></li> 
+             <li><a href="{% url 'moreSpecificLeagueView'  'EuroCup' %}">EURO 2021</a></li>
+            </ul>
+            </li>
+           
+            <li><a href="{% url 'players-by-vote' %}"><i class="fa fa-comments" aria-hidden="true"></i>{% translate 'Polls' %}</a></li>
+            <li>{% url 'news-list' as the_news %}<a href="{{the_news}}"><i class="fa fa-newspaper-o" aria-hidden="true"></i>{% translate 'News' %}</a></li>
+          <!--  <li><a href="awards.html"><i class="fa fa-trophy" aria-hidden="true"></i>Awards</a></li>
+            <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Videos Gallery</a></li> 
+            <li><a href="{% url 'League' %}"><i class="fa fa-trophy" aria-hidden="true"></i>{% translate 'Leagues and Cups' %}</a></li>    -->   
+            <li>
+                {% url 'players-main-page' as the_players %}<a href="{{the_players}}"><i class="fa fa-users" aria-hidden="true"></i>{% translate 'Players' %}</a>
+                <ul><li><a href="{% url 'Countries' 1 %}">By Nationality</a></li></ul>
+            </li>
+
+            <li><a href="{% url 'search' %}"><i class="fa fa-search" aria-hidden="true"></i>{% translate 'Search' %}</a></li>
+            <li><a href="{% url 'Ptstable' %}"><i class="fa fa-users" aria-hidden="true"></i>{% translate 'Table' %}</a></li>
+            <li><a href="{% url 'about' %}"><i class="fa fa-address-card" aria-hidden="true"></i>{% translate 'About' %}</a></li>
+
+            </li>
+
+          
+        </ul>
+
+    </div>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+        <!-- This is the new block for updated news -->
+
+
+        <main>
+            <section class="main-news-left">
+                <h2 style="text-align: center;color:rgb(12, 12, 48);">News which you won't want to miss out</h2>
+                <div class="news-in-left">
+                    <article>
+                        <img src="{% static 'stadium.jpg' %}">
+
+                        <div>
+                            <h3>{{scraped_news.0.headline}}</a></h3>
+                            <p>{{scraped_news.0.content}}
+                            </p>
+
+                            <button>
+                            <a href="#">Read More </a></button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3>{{scraped_news.1.headline}}</h3>
+                        <img src="{% static 'lfoot.jpg' %}">
+                        <div>
+
+                            <p>{{scraped_news.1.content}}
+                            </p>
+
+                            <button>
+                            <a href="#">Read More </a></button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3>{{scraped_news.2.headline}}</h3>
+                        <img src="{% static 'foul.jpg' %}">
+                        <div>
+
+                            <p>{{scraped_news.2.content}}
+
+                            </p>
+                            <button>
+                            <a href="#">Read More...... </a></button>
+                        </div>
+                    </article>
+
+
+            </section>
+
+            <section class="news-in-right">
+                <h2 style="text-align: center;">Get the latest news here</h2>
+                <h3 style="color:rgb(53, 49, 49);">Few seconds ago</h3>
+
+                {% for item in prettified_list %}
+                <article>
+                    <img src="{% static 'foot.jpg' %}">
+                    <div>
+
+                        <h2>{{item.headline}}</h2>
+
+                        <p>...
+                        </p>
+
+                        <button>
+                        
+                            <a href="#">Read More </a>
+                        
+                            
+                        </button>
+
+                    </div>
+
+                </article>
+                {% endfor %}
+
+
+            </section>
+
+        </main>
+
+        <!-- Old news format -->
+
+
+        <div class="container-1">
+            <div class="news-here">
+                <div class="news-col">
+                    <h2>{{scraped_news.3.headline}}
+                    </h2>
+                    <br>
+
+                    <img src="{% static 'stadium.jpg' %}">
+                    <br>
+                    <br>
+                    <p>{{scraped_news.3.content}}</p>
+                    <button><a href="#"> Read More </a></button>
+                </div>
+
+                <div class="news-col">
+                    <h2>{{scraped_news.4.headline}}
+                    </h2>
+                    <br>
+
+                    <img src="{% static 'foot.jpg' %}">
+                    <br>
+                    <br>
+                    <p>{{scraped_news.4.content}}</p>
+                    <button><a href="#">Read More </a></button>
+                </div>
+
+
+                <!-- <div class="news-col">
+            <h1>The craze of the football returns.......
+            </h1>
+            
+       
+            <img src="{% static 'foot.jpg' %}">
+
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore assumenda laboriosam delectus tempora perspiciatis laudantium eos praesentium illo consectetur eveniet? Iusto, sed.</p>
+       <button><a href="#">Read More </a></button>  
+    </div> -->
+
+            </div>
+        </div>
+
+        <!-- NEXT BLOG FOR NEWS -->
+
+        <div class="container-2">
+            <div class="news-here">
+
+                <div class="news-col">
+                    <h2 style="text-align: center;color:rgb(12, 12, 48);">{{scraped_news.5.headline}}
+                    </h2>
+
+                    <br>
+                    <br>
+
+                    <img src="{% static 'women.jpg' %}">
+
+                    <p>{{scraped_news.5.content}}</p>
+                    <button><a href="#">Read More </a></button>
+                </div>
+
+                <div class="news-col">
+                    <h2>{{scraped_news.6.headline}}
+                    </h2>
+                    <br>
+                    <br>
+
+                    <img src="{% static 'women.jpg' %}">
+
+                    <p>{{scraped_news.6.content}}</p>
+                    <button><a href="#">Read More </a></button>
+                </div>
+
+
+                <div class="news-col">
+
+                    <h2>{{scraped_news.7.headline}}
+                    <br>
+                    <br>
+
+                    <img src="{% static 'stadiums.jpg' %}">
+
+                    <p>{{scraped_news.7.content}}</p>
+                    <button><a href="#">Read More </a></button>
+                </div>
+
+            </div>
+        </div>
+
+
+    <!-- </div>
+    </div> -->
+
+    {% endblock %}
+        
+        <!-- For footers..... -->
+    
+           
+            <div class="footer">
+
+                <h3 style="text-align: center;">Choose Language</h3>
+                <br>
+
+             <div class="connect">
+            {% get_language_info for "fr" as lang1 %}
+            {% get_language_info for "es" as lang2 %}
+            {% get_language_info for "en" as lang3 %}
+
+            {% language "fr" %}
+            <img width="40px" height="25px" src="{% static 'fr.jpg' %} " rel="Photo by Nicolas from Pexels"><a href="{% url 'home'%}">{{ lang1.name }}</a>
+            {% endlanguage %}
+
+            {% language "en" %}
+            <img width="40px" height="25px" src="{% static 'en.jpg' %} " rel="Photo by Sharefaith from Pexels"><a href="{% url 'home'%}">{{ lang3.name }}</a>
+            {% endlanguage %}
+
+            {% language "es" %}
+            <img width="40px" height="25px" src="{% static 'esp.jpg' %} " rel="Photo by Sharefaith from Pexels"> <a href="{% url 'home'%}">{{ lang2.name }}</a>
+            {% endlanguage %}   
+
+            </div> 
+
+                                           
+            
+            <div class="address">
+                <h4><i class="fa fa-address-book" aria-hidden="true">{% translate 'Address' %}</i></h4>
+                    <a>28 kilo,Dhulikhel</a>
+                    <a>{% translate 'Kathmandu University' %}</a>
+                    <a>{% translate 'Kathmandu' %}</a>
+                    <a>{% translate 'Nepal' %}</a>
+                    
+            </div>
+           
+            <div class="footer-middle">   
+            <a href="#"><div class="non">{% translate 'Privacy Policy' %}</div></a>  
+            <a href="#"><div class="non">{% translate 'Help' %}</div></a>
+            <a href="#"><div class="non">{% translate 'Terms of Use' %}</div></a>
+            <a href="#"><div class="non">{% translate 'Contact' %}</div></a>
+            <a href="#"><div class="non">{% translate 'Support' %}</div></a>
+            </ul>
+            </div>
+                       
+        
+            </div>
+
+            <div class="bottom-footer">
+                
+                <p>
+               <h3> {% translate 'All rights reserved by ©FootballTracker 2021' %} </h3> </p>
+                </div>
+
+            
+            
+               
+     </body>
+</html>
+
+
+
+

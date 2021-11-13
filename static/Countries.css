@@ -1,0 +1,94 @@
+	@font-face{
+			font-family: myFirstFont;
+			src:url(sansation_light.woff);
+			font-stretch: condensed;
+	}
+
+	*{
+		font-family: myFirstFont;
+	}
+
+
+
+	body{
+			background-color: #6A5ACD;
+			text-align: left;
+			font-size:50px;
+			font-weight: bold;
+			color:#EEE8AA;
+	}
+
+	footer{
+
+			position:sticky;
+			text-align: right;
+			height:20%;
+			font-size:30px;
+			font-weight: bold;
+			color:#EEE8AA;
+	}
+
+
+	#flex-container{
+
+			display: flex;
+		
+
+	}
+
+	#flex-container>#main{
+			
+
+			color:#000000 ;
+			background-color: #FFDAB9;
+			border-color:#6A5ACD;
+			border-radius: 20px;
+			text-align: center;
+			font-size: 14px;
+			padding-top: 5px;
+			margin:0;
+			
+	}
+
+	#flex-container>#Name{
+			
+			
+			background-color: #DDA0DD;
+			word-wrap: break-word;
+			
+	}
+	#flex-container>#Capital{
+			
+			
+			
+			background-color: #20B2AA;
+			word-wrap: break-word;
+			
+
+	}
+	#flex-container>#fullName{
+			
+			
+			background-color: #2E8B57;
+			word-wrap: break-word;
+	}
+	#flex-container>#Region{
+			
+			
+			background-color: #FF6347;
+			word-wrap: break-word;
+	}
+	#flex-container>#Subregion{
+			
+			
+			background-color: #C0C0C0;
+			word-wrap: break-word;
+	}
+	#flex-container>#Timezones{
+		
+			
+			
+			background-color: #DAA520;
+			word-wrap: break-word;
+
+	}

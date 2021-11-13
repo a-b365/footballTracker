@@ -1,0 +1,37 @@
+
+
+
+.news-extend{
+  display:grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 40px;
+  grid-row-gap:20px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 77px;
+  margin-right:117px;
+  margin-bottom:10px;
+
+
+}
+
+.news-extend>div{
+  background-color: white;
+  padding-top:10px;
+}
+
+            
+img {
+  max-width: 100%;
+  height: auto;z
+}
+
+
+
+.hell {
+              
+  padding: 20px 40px 20px;
+  box-shadow: 10px 10px 5px grey;
+  border:1px solid black;
+  
+}

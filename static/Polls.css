@@ -1,0 +1,30 @@
+.polls{
+
+margin-left: 77px;
+margin-right:77px;
+margin-top:10px;
+min-height:100vh;
+background-color: gainsboro;
+padding-top: 10px;
+}
+
+.vote{
+padding: 20px 20px 20px 20px;
+background-color: gainsboro;
+margin-top: 20px;
+
+
+float: left;
+border:1px solid black;
+border-radius: 25px;
+width:100%;
+
+}
+
+.vote li{
+
+text-decoration: none;
+display: inline-flex;
+
+margin-right: 80px;
+}

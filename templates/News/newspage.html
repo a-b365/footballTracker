@@ -1,0 +1,39 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %}News Detail{% endblock %}
+
+    
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'news_detail.css' %}">
+        <!-- For the news-extend content -->
+
+        <div class="news-extend">
+            <div class="hell">
+        {% for object in scraped_news %}
+        <h1>{{object.headline}}</h1><br>
+        <h2>{{object.inner_headline}}</h2>
+        <h2>{{object.author}}</h2><br>
+        <h3>{{object.timestamp}}</h3>
+        <br>
+        <br>
+        
+        <caption>
+        <img src="{% static 'footballtrack.png' %}" alt="" width="1500" height="300">
+        </caption>
+        <br>
+        <br>
+    
+        {% for item in object.content %}
+        <p style="font-size:1vw">{{item}}</p>
+        <br>
+        {% endfor %}
+
+
+</div>
+        </div>
+        {% endfor %}
+
+{% endblock %}
+
+
+       

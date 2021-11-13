@@ -1,0 +1,38 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %}News Detail{% endblock %}
+
+    
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'news_detail.css' %}">
+        <!-- For the news-extend content -->
+
+        <div class="news-extend">
+            <div class="hell">
+
+        <h1>{{object.headline}}</h1>
+        <hr><br>
+        <h2>By {{object.byline}}</h2>
+        <br>
+        <h3>Date published:{{object.date_published}}</h3>
+        <br>
+        <br>
+       
+        <p></p>
+        <br>
+        <br>
+        
+        <img src="{% static 'demo.jpg' %}" alt="" width="1000" height="300">
+        <br>
+        <br>
+
+        <p style="font-size:1vw">
+          {{object.content}}          
+        </p>
+</div>
+        </div>
+
+{% endblock %}
+
+
+       

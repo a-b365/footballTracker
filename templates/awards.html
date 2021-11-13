@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo search</title>
+</head>
+<body>
+
+    {% for value in data %}
+        
+
+    <div id="main">
+
+        
+        <img src="{{value.flag}}" height="25%"><br>
+        <div id="Name"> {{value.idCountry}}</div><br>
+        <div id="Capital"> {{value.countryName}}</div><br>
+        <div id="Region"> {{value.name}}</div><br>
+        <div id="Subregion"> {{value.nationalleague}}</div><br>
+        <div id="Timezones"> {{value.clubsLeague}}</div><br>
+        
+
+
+    </div>
+    {% endfor %}
+
+        <footer>
+        {% if pagination.hasPrevPage %} 
+            <a href="{% url 'leagues' pagination.page|add:'-1' %}">&laquo; Back</a>
+        {% endif %}
+
+        {% if pagination.hasNextPage %} 
+            <a href="{% url 'leagues' pagination.page|add:'1'  %}">Next &raquo;</a>
+        {% endif %}
+
+    </footer>
+
+</body>
+</html>

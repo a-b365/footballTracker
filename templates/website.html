@@ -1,0 +1,253 @@
+<html>
+    {% load static %}
+    <head>
+        
+        <meta charset="utf-8">
+
+        <title>{% block title %}Homepage{% endblock %}</title>
+        <link rel="icon" href="{% static 'Football tracker.png' %}" type="image/icon type">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800" 
+        rel='stylesheet' type='text/css'>
+
+       
+        <!-- bootstrap link cdn-->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    
+    <body>
+
+           
+        <div class="outer-header">
+            
+           <h1> <a href="{% url 'about' %}"><div class="l-g">FOOTBALLING</div></a></h1>    
+
+          
+        </div>
+
+
+        {% block fake %}
+        
+        {% endblock %}
+
+
+        
+
+    {% block navbar %}
+    
+    <div class="header">
+
+        
+        <div class="inner-header">
+           
+            
+
+                <div class="Logo">
+                    <!-- <h3><a href="#">Football <span>Tracker</span></a></h3> -->
+                </div>
+
+                
+           
+               
+
+                 <div class="menu-bar">
+                     
+                    
+                    <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                   
+                    <li>
+
+                    <div class="Menu-1">
+                        <button class="dropbtn"><a href="{% url 'about' %}"><i class="fa fa-address-card" aria-hidden="true"></i>About</a></button>
+                        <div class="dropdown-about">
+                         <a href="#" class="span"><i class="fa fa-phone-square" aria-hidden="true"></i>Contacts</a>
+                          <a href="info.html" class="span"><i class="fas fa-address-book"></i>Info</a>
+                          
+                        </div>  
+                   
+                    </div>
+                    </li>   
+                    
+                    <li>
+                        <div class="Menu-2">
+
+                    
+                    
+                    <button class="dd-button"><a href="{% url 'League' %}"><i class="fa fa-wrench" aria-hidden="true"></i>Matches Fixtures</a></button>                   
+                    <div class="dd-content">
+
+                   
+                    <a class="span" href="{% url 'moreSpecificLeagueView' 'UCL' %}">UEFA Champions League</a>
+                    <a class="span" href="{% url 'moreSpecificLeagueView' 'Laliga' %}">Laliga Santander</a>
+                    <a class="span" href="{% url 'moreSpecificLeagueView' 'PL' %}">Premier League</a>
+                    <a class="span" href="{% url 'moreSpecificLeagueView' 'EuroCup' %}">Euro 2021</a>
+                    <a class="span" href="{% url 'moreSpecificLeagueView' 'UEL' %}">UEFA Europa League </a>
+                    </div>
+                        </div>
+
+                    </li>
+
+
+
+                
+                    <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Results</a></li>
+                    <li><a href="{% url 'players-by-vote' %}"><i class="fa fa-comments" aria-hidden="true"></i>Polls</a></li>
+                    <li>{% url 'news-list' as the_news %}<a href="{{the_news}}"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News&Events</a></li>
+                    <li><a href="{% url 'League' %}"><i class="fa fa-trophy" aria-hidden="true"></i>Leagues and Cups</a></li>
+                    <li>{% url 'players-main-page' as the_players %}<a href="{{the_players}}"><i class="fa fa-users" aria-hidden="true"></i>Players</a></li>
+                    <li><a href="{% url 'Ptstable1' 65 %}"><i class="fa fa-users" aria-hidden="true"></i>Table</a></li>
+                    <li><a href="{% url 'search' %}"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
+                
+
+                                        
+
+                </ul>
+                </div>
+
+         </div>
+        </div>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- For the live scores -->
+
+        <div class="livescores">
+
+          <p>here will be ongoing live scores......</p>
+       
+        </div>
+               
+        <div class="front-news1">
+
+            <div>
+
+                Here will be the first news and the images in short icon......
+
+            </div>
+            
+            <div>
+                NewsNow aims to be the world's most accurate and comprehensive FC Barcelona news aggregator, bringing you the latest Equip Blaugrana headlines from the best Barça sites and other key national and international sports sources. Whether it's the very latest transfer news from the Camp Nou, quotes from a Barca press conference, match previews and reports, or news about Barcelona's progress in La Liga or the Champions League, we've got it covered - breaking FCB news from each site is brought to you automatically and continuously 24/7, within around 10 minutes of publication. N.B. Relevance is automatically assessed, so some headlines not qualifying as FC Barcelona news might appear - please feel free to contact us regarding any persistent issues. 
+            </div>
+            
+            <div>
+                Here will be the first news and the images in short icon......    
+            </div>
+            
+            <div>
+                
+                Here will be the first news and the images in long icon......
+        
+            
+        </div>
+        
+      
+        </div>
+
+        <div class="news-videos">
+            <!-- <div>
+                Here will be some videos
+            </div>
+            <div>
+                Here will be some videos
+            </div> -->
+            <div>
+                Here will be some videos
+            </div>
+        </div>
+                
+        <div class="front-news2">
+
+            <div>
+
+                Here will be the first news and the images in short icon......
+
+            </div>
+            
+            <div>
+                NewsNow aims to be the world's most accurate and comprehensive FC Barcelona news aggregator, bringing you the latest Equip Blaugrana headlines from the best Barça sites and other key national and international sports sources. Whether it's the very latest transfer news from the Camp Nou, quotes from a Barca press conference, match previews and reports, or news about Barcelona's progress in La Liga or the Champions League, we've got it covered - breaking FCB news from each site is brought to you automatically and continuously 24/7, within around 10 minutes of publication. N.B. Relevance is automatically assessed, so some headlines not qualifying as FC Barcelona news might appear - please feel free to contact us regarding any persistent issues. 
+            </div>
+            
+            
+            <!-- <div>
+                Here will be the first news and the images in short icon......    
+            </div> -->
+            
+            <!-- <div>
+                
+                Here will be the first news and the images in long icon......
+        
+            
+        </div> -->
+        
+      
+        </div>
+
+        <!-- This is the comment section page for the website -->
+        <div class="comment-sections">
+            <div>
+
+
+
+            </div>
+
+
+        </div>
+
+{% endblock %}
+        
+        <!-- For footers..... -->
+    
+           
+            <div class="footer">
+                <div class="connect">
+            
+            <h6>Connect with us through</h6>
+            <a><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            <a><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            
+                </div>
+                
+            
+            <div class="address">
+                <h4>Address</h4>
+                    <a>Kathmandu University</a>
+                    <a>28 kilo,Dhulikhel</a>
+                    <a>Kathmandu</a>
+                    <a>Nepal</a>
+                    
+            </div>
+           
+            <div class="footer-middle">   
+            <a href="#"><div class="non">Privacy Policy</div></a>  
+            <a href="#"><div class="non">Help</div></a>
+            <a href="#"><div class="non">Terms of Use</div></a>
+            <a href="#"><div class="non">Contact</div></a>
+            <a href="#"><div class="non">Support</div></a>
+            </ul>
+            </div>
+                       
+        
+            </div>
+
+            <div class="bottom-footer">
+                
+                <p>
+               <h3> All rights reserved by ©FootballTracker 2021 </h3> </p>
+                </div>
+
+            
+               
+               
+     </body>
+</html>

@@ -1,0 +1,16 @@
+
+
+# the pycache directory
+*/__pycache__
+
+#the files with .pyc extension
+
+
+#the test.log file
+test.log
+
+.venv
+
+*/migrations
+
+.vscode

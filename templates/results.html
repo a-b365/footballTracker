@@ -1,0 +1,309 @@
+
+{% extends "homepage.html" %}
+{% block title %}Search {% endblock %}
+{% load static %}
+
+
+{% block fake %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'results.css' %}">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+        <div class="search-inf">
+            <h3>Welcome to the Search bar</h3>
+        </div>
+
+        <div class="search-button">
+           
+        <form class="search" method="post">
+                {% csrf_token %}
+                <!--<input type="text" placeholder="Type to search...." name="search">-->
+                {{form}}
+
+        
+            <button type="submit"><i class="fa fa-search"></i></button>    
+          </form>
+        </div>
+
+
+        <!-- For search box -->
+        <div class="i-info">
+           
+            <h4>Things to do search...</h4>
+            <h4>Any topic of the news </h4>
+            <h4>Name of any of players </h4>
+            <h4>Name of the country for the players</h4>
+    
+        </div>
+
+        <div class="show_results">
+
+        <div>
+
+            <h1> {{info.0}} </h1>
+
+            <a href="{% url 'teams' '42' %}">{{info.1}}</a>
+
+            <a href="{% url 'teams' '113' %}">{{info.2}}</a>
+
+            <a href="#">{{info.3}}</a>
+
+        </div>
+
+
+        <div class="news">
+
+        {% if news_results %}
+
+        Articles Found<hr>
+
+        {% for news in news_results %}
+
+        <div class="news-news">
+            <h2>{{news.headline}}</h2><hr>
+            <p>{{news.content|truncatewords_html:20}}<a href="#">See More...</a></p>
+        </div>
+
+        {% endfor %}
+
+        {% endif %}
+
+        </div>
+
+
+
+        <div class="results">
+
+                {% if player_results %}
+
+
+                <div class="title">{{ player_results|length }} Players Found</div>
+
+                {% for player in player_results %}
+
+            <div class="items">
+
+                {{player.player_name}} 
+                
+
+            </div>
+
+
+                {% endfor %}
+
+                {% endif %}
+
+                
+        </div>
+
+        <div class="results">
+
+                {% if player_country %}
+
+                <div class="title">{{ player_country|length }} Country related to Player</div>
+
+                {% for player in player_country %}
+
+            <div class="items">
+                
+
+                {{player.country_name}}
+
+            </div>
+                {% endfor %}
+
+                {% endif %}
+
+        </div>
+
+
+        <div class="results">
+
+                {% if manager_results %}
+
+                <div class="title">{{ manager_results|length }} Manager Found</div>
+
+                {% for manager in manager_results %}
+
+            <div class="items">
+
+                {{manager.manager_name}}
+                
+            </div>
+
+                {% endfor %}
+
+
+                {% endif %}
+
+        </div>
+
+
+        <div class="results">
+
+                {% if manager_country %}
+
+                <div class="title">{{ manager_country|length }} Country related to Manager</div>
+
+                {% for manager in manager_country %}
+
+            <div class="items">
+
+                {{manager.country_name}}
+
+            </div>
+                
+                {% endfor %}
+
+                {% endif %}
+
+        </div>
+
+
+
+        <div class="results">
+
+                {% if country_results %}
+
+                <div class="title">{{ country_results|length }} Countries Found</div>
+
+                {% for country in country_results %}
+
+
+
+
+                    <a href="#">{{country.country_name}}<img src="{{country_api.data.0.flag}}" height="50px" width="100px"></a>
+               
+                {% endfor %}
+
+                {% endif %}
+
+
+        </div>
+
+    
+
+
+
+        <div class="results">
+
+
+            {% if team_results %}
+                
+                <div class="title">{{ team_results|length }} Team Found</div>
+                    {% for team in team_results %}
+
+
+                    
+                         <a href="#">{{team.team_name}}</a>
+                         <h6>{{team.official_website}}</h6>
+
+
+
+                    {% endfor %}
+
+            {% endif %}
+            
+
+                
+        </div>
+
+
+
+        <div class="results">
+
+                        
+                {% if team_country %}
+
+                <div class="title">{{ team_country|length }} Country related to the Team</div>
+
+                {% for team in team_country %}
+
+                
+                <div class="items">        
+                        <a href="#">{{team.country_name}}</a>
+                </div>
+                        
+                
+                {% endfor %}
+
+                {% endif %}
+
+
+        </div>
+
+
+        <div class="results">
+
+                        
+                {% if first_team_results %}
+
+                <div class="title">{{ first_team_results|length }} Players Found</div>
+
+                {% for player in first_team_results %}
+
+                <div class="items">
+                    <a href="#">{{player.player_name}}</a>
+                </div>
+                
+                {% endfor %}
+
+                {% endif %}
+
+
+        </div>
+
+
+        <div class="results">
+
+                        
+                {% if competition_results %}
+
+                <div class="title">{{ competition_results|length }} Leagues Found</div>
+
+                {% for league in competition_results %}
+    
+                        <h2><a href="#">{{league.competition_name}}</h2>
+                        <h2><a href="#">{{league.country_name}}</h2>
+                        <h2><a href="#">{{league.nationalLeague}}</h2>
+                        <h2><a href="#">{{league.clubLeague}}</h2>
+                
+                {% endfor %}
+
+                {% endif %}
+
+
+        </div>
+
+
+                
+        </div>
+
+            
+        </div>
+
+
+
+        
+
+{% endblock %}
+
+
+{% block navbar %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+        
+
+{% endblock %}
+    
+           
+        

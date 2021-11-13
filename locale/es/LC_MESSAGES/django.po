@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-16 23:22+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\News\forms.py:8
+msgid "Choose the preferred news date (required, from 2021 April 1 to June 14)"
+msgstr ""
+"Elija la fecha de noticias preferida (requerida, del 1 de abril de 2021 al "
+"14 de junio)"
+
+#: .\Players\views.py:27
+msgid "Hello"
+msgstr "Hola"
+
+#: .\Projectfootball\forms.py:12
+#, python-format
+msgid "%(value)s is not allowed"
+msgstr ""
+
+#: .\Projectfootball\settings.py:153
+msgid "English"
+msgstr "Inglés"
+
+#: .\Projectfootball\settings.py:154
+msgid "French"
+msgstr "Francés"
+
+#: .\Projectfootball\settings.py:155
+msgid "Spanish"
+msgstr "Español"
+
+#: .\templates\PlayersList.html:14
+#, fuzzy
+#| msgid "Players"
+msgid "Player name"
+msgstr "Futbolistas"
+
+#: .\templates\PlayersList.html:15
+msgid "Full name"
+msgstr "Nombre completo"
+
+#: .\templates\PlayersList.html:16
+msgid "Age"
+msgstr "Edad"
+
+#: .\templates\PlayersList.html:17
+msgid "Height"
+msgstr "Altura"
+
+#: .\templates\PlayersList.html:18
+msgid "Weight"
+msgstr "Peso"
+
+#: .\templates\PlayersList.html:63
+msgid "previous"
+msgstr "anterior"
+
+#: .\templates\PlayersList.html:70
+msgid "Page"
+msgstr "Página"
+
+#: .\templates\PlayersList.html:70
+msgid "of"
+msgstr "de"
+
+#: .\templates\PlayersList.html:77
+msgid "next"
+msgstr "próximo"
+
+#: .\templates\PlayersList.html:78
+msgid "last"
+msgstr "último"
+
+#: .\templates\PointsTable.html:39
+msgid "Points Table"
+msgstr "Tabla de puntos"
+
+#: .\templates\PointsTable.html:43
+msgid "Team"
+msgstr "Grupo"
+
+#: .\templates\admin\app_list.html:8
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: .\templates\admin\app_list.html:19
+msgid "Add"
+msgstr ""
+
+#: .\templates\admin\app_list.html:26
+msgid "View"
+msgstr ""
+
+#: .\templates\admin\app_list.html:28
+msgid "Change"
+msgstr ""
+
+#: .\templates\admin\app_list.html:39
+msgid "You don’t have permission to view or edit anything."
+msgstr ""
+
+#: .\templates\admin\login.html:23
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\templates\admin\login.html:23
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\templates\admin\login.html:39
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: .\templates\admin\login.html:59
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: .\templates\admin\login.html:63
+msgid "Log in"
+msgstr ""
+
+#: .\templates\homepage.html:51 .\templates\registration\logged_out.html:4
+msgid "Home"
+msgstr "Página principal"
+
+#: .\templates\homepage.html:52
+msgid "Matches Fixtures"
+msgstr "Partidos Fixtures"
+
+#: .\templates\homepage.html:62
+msgid "Polls"
+msgstr "Encuestas"
+
+#: .\templates\homepage.html:63
+msgid "News"
+msgstr "Noticias"
+
+#: .\templates\homepage.html:66
+msgid "Leagues and Cups"
+msgstr "Ligas"
+
+#: .\templates\homepage.html:67
+msgid "Players"
+msgstr "Futbolistas"
+
+#: .\templates\homepage.html:68
+msgid "Search"
+msgstr "Búsqueda"
+
+#: .\templates\homepage.html:69
+msgid "Table"
+msgstr "Tabla de puntos"
+
+#: .\templates\homepage.html:70
+msgid "About"
+msgstr "Acerca de"
+
+#: .\templates\homepage.html:364
+msgid "Address"
+msgstr "Domicilio"
+
+#: .\templates\homepage.html:366
+msgid "Kathmandu University"
+msgstr "Universidad de Katmandú"
+
+#: .\templates\homepage.html:367
+msgid "Kathmandu"
+msgstr "Katmandú"
+
+#: .\templates\homepage.html:368
+msgid "Nepal"
+msgstr ""
+
+#: .\templates\homepage.html:373
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: .\templates\homepage.html:374
+msgid "Help"
+msgstr "Ayuda"
+
+#: .\templates\homepage.html:375
+msgid "Terms of Use"
+msgstr "Condiciones de uso"
+
+#: .\templates\homepage.html:376
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\templates\homepage.html:377
+msgid "Support"
+msgstr "Apoyo"
+
+#: .\templates\homepage.html:387
+msgid "All rights reserved by ©FootballTracker 2021"
+msgstr "Todos los derechos reservados por ©FootballTracker 2021"
+
+#: .\templates\info.html:11
+msgid ""
+"Football tracker intends to provide all what you need i.e. to the football "
+"fans all over the world. Though it is has still got some features to be "
+"added, it will be a challenge for our team to provide every possible "
+"features in coming days. It has still many of the features which the "
+"football fans around the world will surely love. We have got the different "
+"features such as online matches links in order to watch the current ongoing "
+"matches live.We also have a section name matches fixtures where any football "
+"fan can find the upcoming matches of the league which they love to watch."
+"Other features are the user can do the matches votings in real time. User "
+"also can see the ranking of the players and vote for their favourite one. We "
+"also have got the section of news and events where user can know about "
+"different sport technicians opinions and views regarding the matches as well "
+"as the other news related to football in ongoing world. There is also a "
+"section named video gallery where football fans can enjoy the best football "
+"clips which they might have missed during the live matches.More over our "
+"website has the special feature of automatic login i.e noone has to create "
+"account to enjoy our services and pay for the contents. If you have any "
+"queries related to it you can email us at our email address. Thankyou!"
+msgstr ""
+"Football tracker tiene la intención de proporcionar todo lo que necesita, es "
+"decir, al fútbol fans de todo el mundo. Aunque todavía tiene algunas "
+"características para ser agregó, será un desafío para nuestro equipo brindar "
+"todo lo posible características en los próximos días. Todavía tiene muchas "
+"de las características que el Los fanáticos del fútbol de todo el mundo "
+"seguramente amarán. Tenemos las diferentes  características tales como "
+"enlaces de partidos en línea con el fin de ver elactualmente en curso "
+"partidos en vivo.También tenemos una sección de nombres de partidos de "
+"partidos donde cualquier fútbol los aficionados pueden encontrar los "
+"próximos partidos de la liga que les encanta ver. Otras características son "
+"que el usuario puede hacer las votaciones de los partidos en tiempo real. "
+"Usuario también se puede ver el ranking de los jugadores y votar por su "
+"favorito. Nosotros también tenemos la sección de noticias y eventos donde el "
+"usuario puede saber acerca de opiniones y opiniones de diversos técnicos del "
+"deporte del con respecto a los fósforos también como las otras noticias "
+"relacionadas con el fútbol en el mundo en curso. También hay un sección "
+"llamada galería de vídeo donde los aficionados al fútbol pueden disfrutar "
+"del mejor fútbol clips que podrían haberse perdido durante los partidos en "
+"vivo.Más sobre nuestro el sitio web tiene la característica especial de "
+"inicio de sesión automático, es decir, nadie tiene que crear cuenta para "
+"disfrutar de nuestros servicios y pagar por los contenidos. Si usted tiene "
+"alguna consultas relacionadas con él puede enviarnos un correo electrónico a "
+"nuestra dirección de correo electrónico.¡Gracias! "
+
+#: .\templates\info.html:35
+msgid "Connect with us through"
+msgstr "Conéctate con nosotros a través de"
+
+#: .\templates\registration\logged_out.html:10
+msgid "You're logged out of Football Tracker Administration."
+msgstr ""
+"Football tracker a l’intention de fournir tout ce dont vous avez besoin, "
+"c’est-à-dire au football "
+
+#: .\templates\registration\logged_out.html:12
+msgid "Please click here to log in again"
+msgstr ""
+
+#~ msgid "Lost"
+#~ msgstr "Perdido"
+
+#~ msgid "Tie"
+#~ msgstr "Atar"

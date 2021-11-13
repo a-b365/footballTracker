@@ -1,0 +1,56 @@
+{% extends 'homepage.html' %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+
+<div class="about-body">
+    <div class="about-section">
+        <div class="inner-section">
+            <h1>Football Tracker</h1>
+            <p class="text">
+                {% load i18n %}
+                {% blocktranslate trimmed %}
+                Football tracker intends to provide all what you need i.e. to the football fans all over the world. 
+                Though it is has still got some features to be added, it will be a challenge for our team to provide
+                every possible features in coming days. It has still many of the features which the football fans 
+                around the world will surely love. 
+        
+                We have got the different features such as online matches links in order to watch the current ongoing
+                matches live.We also have a section name matches fixtures where any football fan can find the upcoming
+                matches of the league which they love to watch.Other features are the user can do the matches votings
+                in real time. User also can see the ranking of the players and vote for their favourite one.
+        
+                We also have got the section of news and events where user can know about different sport technicians
+                opinions and views regarding the matches as well as the other news related to football in ongoing world.
+                There is also a section named video gallery where football fans can enjoy the best football clips which
+                they might have missed during the live matches.More over our website has the special feature of automatic
+                login i.e noone has to create account to enjoy our services and pay for the contents.
+        
+                        
+        
+                    If you have any queries related to it you can email us at our email address. Thankyou!
+
+                {% endblocktranslate %}
+            </p>
+
+            <h1>{% translate 'Connect with us through' %}</h1>
+            <div class="social-medias">
+               
+               <span> <a><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+              <span><a><i class="fa fa-twitter" aria-hidden="true"></i></a></span>  
+              <span> <a><i class="fa fa-pinterest" aria-hidden="true"></i></a></span>
+              <span><a><i class="fa fa-youtube" aria-hidden="true"></i></a></span>  
+              <span> <a><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+    
+           
+ 
+

@@ -1,0 +1,197 @@
+
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %}News{% endblock %}
+
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'news.css' %}">
+
+            <div class="date-selector">
+
+
+                <form method="POST">
+                    <label>
+                        {% csrf_token %}
+                        
+                      <!--<input type="date" name="news" min="2021-04-01" max="2021-06-20" required>-->
+                      {{form}}
+                      <span class="validity"></span>
+                    </label>
+                  
+                    <p>
+                      <button>Submit</button>
+                    </p>
+                  </form>
+
+
+
+        </div>
+
+
+      <!-- news and events content -->
+
+<!-- new formatting done -->
+
+<section class="extra-news">
+   <div class="news-parts">
+
+      <article class="sport-1">
+        <!-- <a href="{% url 'skysports' scraped_news.0.path %}"> -->
+         <h3 align="center">{{scraped_news.0.category}}</h3>
+         <img src="{% static 'foot.jpg' %}">
+         <h3>{{scraped_news.0.headline}}</h3>
+         <p>{{scraped_news.0.content}} </p>
+         <h4>{{scraped_news.0.timestamp}}</h4>
+        </a>
+      </article>
+
+
+
+      <article class="sport-2">
+        <!-- <a href="{% url 'skysports' scraped_news.1.path %}"> -->
+         <h3 align="center">{{scraped_news.1.category}}</h3>
+         <img src="{% static 'mes.jpg' %}">
+         <h3>{{scraped_news.1.headline}}</h3>
+         <p>{{scraped_news.1.content}}</p>
+         <h4>{{scraped_news.1.timestamp}}</h4>
+        </a>
+      </article>
+      
+   </div>
+   
+   <div class="side-news">
+      <h4>RECENT NEWS</h4>
+      
+      {% for news in recent_news %}
+      <div class="recent-news">
+         <img src="{% static 'lfoot.jpg' %}">
+         <p><a href="{% url 'news-detail' news.id %}">{{news.headline}}</a></p>
+      </div>
+
+      <hr>
+      {% endfor %}
+      
+
+   </div>
+</section>
+</main>
+
+
+<!-- Old news format -->
+
+
+<div class="container-1">
+   <div class="news-here">
+      <!-- <a href="{% url 'skysports' scraped_news.2.path %}"> -->
+       <div class="news-col">
+           <h1>{{scraped_news.2.category}}
+           </h1>
+           <img src="{% static 'foot.jpg' %}">
+           <h1>{{scraped_news.2.headline}}
+           </h1>
+      <p>{{scraped_news.2.content}}</p>
+      <h1>{{scraped_news.2.timestamp}}
+           </h1>
+       </div>
+      </a>
+
+      
+      <!-- <a href="{% url 'skysports' scraped_news.3.path %}"> -->
+       <div class="news-col">
+           <h1>{{scraped_news.3.category}}
+           </h1>
+          
+           <img src="{% static 'foot.jpg' %}">
+           <h1>{{scraped_news.3.headline}}
+           </h1>
+      <p>{{scraped_news.3.content}}</p>
+      <h1>{{scraped_news.3.timestamp}}
+           </h1>
+       </div>
+     </a>
+
+   </div>
+</div>
+
+<!-- NEXT BLOG FOR NEWS -->
+
+<div class="container-2">
+   <div class="news-here">
+
+      <!-- <a href="{% url 'skysports' scraped_news.4.path %}">    -->
+       <div class="news-col">
+           <h1 align="center">{{scraped_news.4.category}}
+           </h1>
+           <img src="{% static 'women.jpg' %}">
+
+        <h1>{{scraped_news.4.headline}}</h1>
+      <p>{{scraped_news.4.content}}</p>
+      <h1>{{scraped_news.4.timestamp}}
+           </h1>
+       </div>
+      </a>
+
+       
+
+      <!-- <a href="{% url 'skysports' scraped_news.5.path %}"> -->
+       <div class="news-col">
+           <h1 align="center">{{scraped_news.5.category}}
+           </h1>
+           <img src="{% static 'women.jpg' %}">
+           <h1>{{scraped_news.5.headline}}
+           </h1>
+            <p>{{scraped_news.5.content}}</p>
+      <h1>{{scraped_news.5.timestamp}}
+           </h1>
+       </div>
+      </a>
+
+   </div>
+</div>
+
+<!-- 3rd news -->
+
+<div class="container-2">
+   <div class="news-here">
+       
+       <!-- <a href="{% url 'skysports' scraped_news.6.path %}"> -->
+       <div class="news-col">
+           <h1 align="center">{{scraped_news.6.category}}
+           </h1>
+           <img src="{% static 'women.jpg' %}">
+
+           <h1>{{scraped_news.6.headline}}
+           </h1>
+      <p>{{scraped_news.6.content}}</p>
+      <h1>{{scraped_news.6.timestamp}}
+           </h1>
+       </div>
+     </a>
+       
+
+       <!-- <a href="{% url 'skysports' scraped_news.7.path %}"> -->
+       <div class="news-col">
+           <h1 align="center">{{scraped_news.7.category}}
+           </h1>   
+      
+           <img src="{% static 'women.jpg' %}">
+
+           <h1>{{scraped_news.7.headline}}
+           </h1>
+      <p>{{scraped_news.7.content}}</p>
+      <h1>{{scraped_news.7.timestamp}}
+           </h1>
+       </div>
+     </a>
+
+   </div>
+</div>
+
+<br>
+<br>  
+      
+
+{% endblock %}
+

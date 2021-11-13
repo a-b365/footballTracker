@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}Scoreboard{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'League.css' %}">
+	<link rel="icon" href="{% static 'Football tracker.png' %}" type="image/icon type">
+
+</head>
+<body>
+	
+	<h1><span><img src="{% static 'Logooo.png' %}" alt="The Footballtracker logo"></span>Football Tracker</h1>
+
+	
+	<div class="outer">
+		<button onclick="#">Home</button><br>
+		<button onclick="#">Spain</button><br>
+		<button onclick="#">England</button><br>
+		<button onclick="#">France</button><br>
+		<button onclick="#">Italy</button><br>
+		<button onclick="#">Germany</button><br>
+		<button onclick="#">Netherlands</button><br>
+		<button onclick="#">Scotland</button><br>
+		<button onclick="#">Uefa Champions League</button><br>
+		<button onclick="#">Europa League</button><br>
+		<button onclick="#">Euro 2020</button><br>
+		<button onclick="#">World Cup</button><br>
+		<button onclick="#">UEFA Nations League</button><br>
+		<button onclick="#">African Cup of Nations</button><br>
+		<button onclick="#">Copa America</button><br>
+		<button onclick="#">Women's Euro</button><br>
+		<button onclick="#">Euro U21</button><br>
+		<button onclick="#">CONACAF</button><br>
+		<button onclick="#">International</button><br>
+
+
+
+	<span class="specialbutton"><button>Other Options</button>
+	<div class="dropdown-content">
+	
+	{% for item in country_list %}
+	<button class="inner-special">{{item.country_name}}</button><br>
+	{% endfor %}
+	</div>
+	
+	</span>
+
+	</div>
+
+
+	
+	
+	<div class="fixtures">
+
+
+    {% block league %}
+			
+			<div class="league-divison"><h1>ONGOING MATCHES<h1></div>		
+				
+			{% for value in matches.data|dictsort:"match_start" %}
+				<div class="matches">
+				{% if value.status == "finished" %}
+					<h5><span> {{value.stats.home_score}} <img  src={{value.home_team.logo}}>
+					{{ value.home_team.name }}{{value.country.country_code}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ value.away_team.name}}{{value.country.country_code}}
+					<img  src={{value.away_team.logo}}> {{value.stats.away_score}}</span></h5>
+
+				{% else %}
+					<h5>{{value.match_start}}<h2><h1><span>&nbsp;&nbsp;<img src={{value.home_team.logo}} > 
+					{{ value.home_team.name }}&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;{{ value.away_team.name }}
+					<img  src={{value.away_team.logo}}></span></h5>
+				{% endif %}	
+
+				<a href="#" align="left">View Details</a>
+			</div>
+			{% endfor %}
+
+
+	{% endblock %}
+
+	</div>
+
+	
+
+	
+
+	<div class="head">
+		
+		<table>
+			<div class="inner">
+	 			 Points Table
+			</div>
+		<tr>
+
+			<th colspan="3 "width=70%>Team</th>
+			<th>MP</th>
+			<th>Pts</th>
+
+		</tr>
+
+{% block table %}
+		{% for team in data %}
+
+		<tr>
+		<td>{{1}}</td>
+		<td colspan="2" width="60%"></td>
+		<td>{{38}}</td>
+		<td>{{77}}</td>
+		</tr>
+		
+		{% endfor %}
+{% endblock %}
+
+		
+
+		</table>
+
+
+	</div>
+
+	
+
+		
+
+	
+
+
+<!--
+
+	
+		
+	{% for league in data %}
+	<li>
+		<ul>
+			
+			<li>{{id}}</li>
+			<li>{{idCountry}}</li>
+			<li>{{countryName}}</li>
+			<li>{{nationalLeague}}</li>
+			<li>{{clubsLeague}}</li>
+			<li>{{name}}</li>
+
+		</ul>
+	</li>
+
+	<p>The information are fetched through REST Api's. So, any </p>
+
+	{% endfor %}-->
+
+	<footer>
+		
+		<p>The information are fetched through REST Api's. So, server failures may frequently arrive.</p>
+
+	</footer>
+</body>
+</html>

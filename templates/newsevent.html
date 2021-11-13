@@ -1,0 +1,56 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block title %}News{% endblock %}
+{% block content %}   
+
+<link rel="stylesheet" type="text/css" href="{% static 'news.css' %}">
+
+        
+        {% if filtered_news %}
+            
+
+        {% else %}
+
+          <h1 align="center">Sorry,No Results Found!!!</h1>
+
+        {% endif %}
+
+        {% for news in filtered_news %}
+        <div class="hell">
+
+                <a href="{% url 'news-detail' news.id %}">
+                <h1>{{news.headline}}</h1>
+
+                <h3>{{news.date_published}}</h3>
+                <br>
+                <br>
+
+                {{news.content}}
+
+        </div>
+        {% endfor %} 
+        
+        <!-- news and events content -->
+
+        {% if recent_news %}
+        <div class="newsfixtures">
+
+            
+            {% for news in recent_news %}
+             <div class="hell">
+
+                <h1 style=color:blue><a href="{% url 'news-detail' recent_news.id %}">{{recent_news.headline}}</a></h1>
+
+                <h3>{{recent_news.date_published}}</h3>
+                <br>
+                <br>
+                    <p>{{recent_news.content}}</p>
+             </div> 
+            {% endfor %}
+             
+
+        </div>
+        {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>Nations</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'Countries.css' %}">
+	<link rel="icon" href="{% static 'Football tracker.png' %}" type="image/icon type">
+</head>
+
+<body>
+	<h2 style="position: sticky;">Click a Flag to Filter Players</h2>
+	
+	<div id="flex-container">
+		
+		
+		{% for value in data %}
+		
+
+	<div id="main">
+
+		
+		<a href="{% url 'player-by-nationality' value.name %}"><img src="{{value.flag}}" height="25%"><br></a>
+		<div id="Name">Name: {{value.name}}</div><br>
+		<div id="Capital">Capital: {{value.capital}}</div><br>
+		<div id="Region">Region: {{value.region}}</div><br>
+		<div id="Subregion">Subregion: {{value.subregion}}</div><br>
+		<div id="Timezones">Timezones: {{value.timezones}}</div><br>
+
+	</div>
+		{% endfor %}
+
+	</div>
+	
+
+	<footer>
+		
+		{% if pagination.hasPrevPage %}	
+			<a href="{% url 'Countries' pagination.page|add:'-1' %}">&laquo; Back</a>
+		{% endif %}
+
+		{% if pagination.hasNextPage %}	
+			<a href="{% url 'Countries' pagination.page|add:'1'  %}">Next &raquo;</a>
+		{% endif %}
+
+	</footer>
+	
+
+</body>
+
+</html>

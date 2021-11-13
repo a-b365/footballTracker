@@ -1,0 +1,246 @@
+
+
+  /* For all of the matches fixtures */
+
+ /* .fixtures{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 4px white;
+    height: 100%;
+    margin-left: 77px;
+    margin-right:77px;
+  
+  
+  }
+  .fixtures>div{
+    background-color: rgb(230, 245, 229);
+    padding:1px;
+  }
+  
+  .fixtures>div:nth-child(odd){
+    background-color: rgb(54, 10, 47);
+  }*/
+
+
+.date-selector {
+      height: auto;
+      
+      background-color: #f3f3f3;
+      border:1px solid rgba(255, 255, 255, 0.699);
+      text-align: center;
+      padding-bottom:10px;
+    }
+
+
+  label {
+      display: block;
+      font: 1rem 'Fira Sans', sans-serif;
+    }
+    
+
+  input,label {
+      margin: .4rem 0;
+    }
+
+
+  .newsfixtures{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap:20px;
+    height: auto;
+   /* margin-left: 77px;
+    margin-right:77px;*/
+
+    padding:10px 20px 10px 10px;
+    background-color: white;
+    border: 1px solid black;
+  
+  
+  }
+  .newsfixtures>div{
+    background-color: rgb(233, 239, 241, 0.719);
+    /*padding:1px;*/
+    padding:10px 20px 10px 10px;
+  }
+  
+ /* .newsfixtures>div:nth-child(odd){
+    background-color: rgb(70, 16, 62);
+  }
+
+
+.hell {
+              
+               padding: 20px 40px 20px;
+               box-shadow: 10px 10px 5px grey;
+               border:1px solid black;
+               
+             }
+
+ .hell h1{
+    color:blue;
+ }
+*/
+
+ /* .newsfixtures>div:nth-child(odd){
+    background-color: rgb(70, 16, 62);
+  }
+*/
+
+/* 
+body{
+font-family: 'Raleway', sans-serif;
+  background: #c6c6c6;
+  margin:40px 40px 40px 40px;
+} */
+.extra-news hr{
+  width: auto;
+  margin: 0 auto;
+}
+.extra-news{
+background-color: rgb(245, 238, 238);
+display: flex;
+flex-wrap: wrap;
+padding: 0 5%;
+justify-content: space-between;
+
+}
+.news-parts{
+display: flex;
+flex-wrap: wrap;
+flex-basis: 60%;
+justify-content: space-between;
+
+}
+.sport-1 h2{  
+background-color: #ebeaec;
+}
+.sport-2 h2{
+background-color: #ebeaec;
+}
+.sport-1 h2, .sport-2 h2{
+  margin: 8px 0 0 0;
+padding: 0 8px;
+}
+
+.extra-news img{
+width: 100%;
+height: 250px;
+}
+.sport-1,.sport-2{
+flex-basis: 45%; /* for the same two contents*/
+}
+.side-news{
+width: 100%;
+padding: 12px;
+flex-basis: 25%;
+border: 1px solid #fff;
+border-radius: 5px;
+margin: auto 0;
+background-color: rgb(250, 248, 248);
+border: 1px solid black;
+}
+.side-news p{
+text-align: center;
+}
+.recent-news{
+display: flex;
+}
+.recent-news img{
+width: 150px;
+height: 70px; 
+margin: 10px;
+}
+.recent-news p{
+font-size: 15px;
+font-weight: bold;
+margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+.breaking-news-parts{ 
+  padding: 10px;
+  flex-wrap: wrap;
+}
+#featured{
+  flex: auto;
+} 
+.news-parts, .side-news, .news-parts article,.social-links section{
+  flex-basis: 100%;   
+}
+.side-news{
+  border-width: 0;
+}
+
+}
+
+.pding{
+  margin: 40px 40px 40px 40px;
+}
+
+
+
+
+/* From the front page derived */
+
+.container-1{
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
+ background-color: #f3f3f3;
+
+}
+.container-2{
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
+ background-color: #f3f3f3;
+
+}
+.container-3{
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 15px;
+ background-color: #f3f3f3;
+
+}
+
+
+.news-here{
+  display:flex;
+}
+.news-col{
+  padding:1rem;
+  flex:1;  
+}
+
+.news-col:not(:last-child){
+   border-right:2px solid #cfcfcf;
+}
+
+.news-col h3{margin: 10px 0px;}
+.news-col img{max-width: 100%;}
+
+.news-col p{
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+
+}
+
+@media  screen and (max-width:768px) {
+
+  .news-here{
+      flex-direction:column;
+  }
+
+  .news-col:not(:last-child){
+   border-right:none;
+}
+  
+}

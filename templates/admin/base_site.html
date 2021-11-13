@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+
+{% load i18n static %} 
+
+{% block title %}Backend | Football Tracker{% endblock %}
+
+{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}
+
+{% block branding %}
+
+<h1 id="site-name" style="font-family:cursive;" ><a href="{% url 'admin:index' %}">Football Tracker Administration</a></h1>
+
+<h2>Warning!Stay out if you're not a member.</h2>
+
+{% endblock %} 
+
+{% block sidebar %}
+	
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
+
+{}

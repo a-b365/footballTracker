@@ -1,0 +1,38 @@
+{% extends "homepage.html" %}
+{% block title %}Polls{% endblock %}
+{% block content %}
+{% load static %}
+	<link rel="stylesheet" type="text/css" href="{%static 'Polls.css'%}">   
+
+        <!-- For the voting content -->
+
+        <div class="polls">
+
+            <h2 style="text-align: center;">Welcome to the voting sections...Feel free to vote here</h2>
+
+           <div class="vote">
+               <h3><u>The Voting questions template tag will be inserted here....</u></h3><br>
+
+               <!-- For options -->
+
+            
+
+                <li><button>Option 1</button></li>
+                <li><button>Option 2</button></li>
+                <li><button>Option 3</button></li>
+                <li><button>Option 4</button></li>
+                
+
+             
+               </table>
+           
+
+           </div>
+            
+
+        </div>
+
+{% endblock %}
+
+
+        
