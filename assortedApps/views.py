@@ -70,10 +70,10 @@ class League(View):
 		   			("season_id","352"),
 				);
 
-			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ[sdapikeyI] }, 
+			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ['sdapikeyI'] }, 
 							params=params_);
 
-			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ[sdapikeyI] }, 
+			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ['sdapikeyI'] }, 
 							params=params__);
 
 		if league=="Laliga":
@@ -87,10 +87,10 @@ class League(View):
 		   			("season_id","1511"),
 				);
 
-			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ[sdapikeyI] }, 
+			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ['sdapikeyI'] }, 
 							params=params_);
 
-			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ[sdapikeyI] }, 
+			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ['sdapikeyI'] }, 
 							params=params__ );
 
 
@@ -107,11 +107,11 @@ class League(View):
    					
 				);
 
-			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ[sdapikeyII] } ,
+			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ['sdapikeyII'] } ,
 							params=params_);
 
 
-			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ[sdapikeyII] },
+			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ['sdapikeyII'] },
 							params=params__ );
 
 			
@@ -129,10 +129,10 @@ class League(View):
    					
 				);
 
-			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ[sdapikeyII] }, 
+			response_a = requests.get('https://app.sportdataapi.com/api/v1/soccer/matches', headers={ "apikey" : os.environ['sdapikeyII'] }, 
 							params=params_);
 
-			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ[sdapikeyII] },
+			response_b = requests.get('https://app.sportdataapi.com/api/v1/soccer/standings', headers={ "apikey" : os.environ['sdapikeyII'] },
 							params=params__ );
 
 
